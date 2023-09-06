@@ -1,0 +1,130 @@
+[
+    {
+        "id": "lente-01",
+        "titulo": "Lentes de Sol",
+        "imagen": "./img/lentes/lentes.jpg",
+        "precio": 1000
+    },
+    {
+        "id": "lente-02",
+        "titulo": "Lentes Aviador",
+        "imagen": "./img/lentes/lentes 2.jpg",
+        "precio": 1000
+    },
+    {
+        "id": "lente-03",
+        "titulo": "Lentes de Rayban",
+        "imagen": "./img/lentes/lentes 3.jpg",
+        "precio": 1000
+    },
+    {
+        "id": "lente-04",
+        "titulo": "Lentes de Sol",
+        "imagen": "./img/lentes/lentes 4.jpg",
+        "precio": 1000
+    },
+    {
+        "id": "lente-05",
+        "titulo": "Lentes Minecraft",
+        "imagen": "./img/lentes/lentes minecraft.webp",
+        "precio": 1000
+    },
+    {
+        "id": "Gorra-01",
+        "titulo": "Gorra Ovni",
+        "imagen": "./img/gorras/gorra Alien.webp",
+        "precio": 1000
+    },
+    {
+        "id": "Gorra-02",
+        "titulo": "Gorra Alien",
+        "imagen": "./img/gorras/gorra Alien2.webp",
+        "precio": 1000
+    },
+    {
+        "id": "Gorra-03",
+        "titulo": "Gorra Pizza",
+        "imagen": "./img/gorras/gorra pizza.webp",
+        "precio": 1000
+    },
+    {
+        "id": "Gorra-04",
+        "titulo": "Gorra Rick",
+        "imagen": "./img/gorras/gorra Rick.jpg",
+        "precio": 1000
+    },
+    {
+        "id": "Gorra-05",
+        "titulo": "Gorra Morty",
+        "imagen": "./img/gorras/gorra Morty.jpg",
+        "precio": 1000
+    },
+    {
+        "id": "Gorra-06",
+        "titulo": "Gorro Rojo",
+        "imagen": "./img/gorras/gorro Rojo.jpg",
+
+        "precio": 1000
+    },
+    {
+        "id": "Gorra-07",
+        "titulo": "Gorro Negro",
+        "imagen": "./img/gorras/gorro Negro.jpg",
+
+        "precio": 1000
+    },
+    {
+        "id": "Gorra-08",
+        "titulo": "Gorro Plomo",
+        "imagen": "./img/gorras/gorro plomo.jpg",
+        "precio": 1000
+    },
+    {
+        "id": "Gorra-09",
+        "titulo": "Gorro Verde",
+        "imagen": "./img/gorras/gorra verde.jpg",
+        "precio": 1000
+    },
+    {
+        "id": "Gorra-10",
+        "titulo": "Gorro Beich",
+        "imagen": "./img/gorras/gorra marron.jpg",
+        "precio": 1000
+    },
+    {
+        "id": "reloj-01",
+        "titulo": "Reloj Seiko Plata",
+        "imagen": "./img/reloj/reloj seiko plata.webp",
+        "precio": 1000
+    },
+    {
+        "id": "reloj-02",
+        "titulo": "Reloj Tissot Oro",
+        "imagen": "./img/reloj/reloj tissot oro.jpg",
+        "precio": 1000
+    },
+    {
+        "id": "reloj-03",
+        "titulo": "Reloj Casio Transparente",
+        "imagen": "./img/reloj/reloj casio transparente.jpg",
+        "precio": 1000
+    },
+    {
+        "id": "reloj-04",
+        "titulo": "Reloj casio Blanco",
+        "imagen": "./img/reloj/reloj blanco arcoiris.jpg",
+        "precio": 1000
+    },
+    {
+        "id": "reloj-05",
+        "titulo": "Reloj casio Gris",
+        "imagen": "./img/reloj/reloj casio gris.jpg",
+        "precio": 1000
+    },
+    {
+        "id": "reloj-06",
+        "titulo": "Reloj Casio Plomo",
+        "imagen": "./img/reloj/reloj plomo arcoiris.jpg",
+        "precio": 1000
+    }
+]

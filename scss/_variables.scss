@@ -1,0 +1,10 @@
+@mixin medidas ($ancho, $alto) {
+    width: $ancho;
+    height: $alto;
+}
+
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
