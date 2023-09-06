@@ -71,18 +71,18 @@ function añadirProductosCarrito() {
     });
 }
 
-let productosEnCarrito = JSON.parse(localStorage.getItem('productosEnCarrito')) || [];
+let itemsCard = JSON.parse(localStorage.getItem('itemsCard')) || [];
 
 function addToCartClicked(event) {
-    const idBoton = event.currentTarget.id;;
-    const productoAgregado = productos.find(producto => producto.id === idBoton);
+    const Boton = event.currentTarget.id;;
+    const productoAgregado = productos.find(producto => producto.id === Boton);
     
-    if(productosEnCarrito.some(producto => producto.id === idBoton)) {
-        const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
-        productosEnCarrito[index].cantidad++;
+    if(itemsCard.some(producto => producto.id === Boton)) {
+        const index = itemsCard.findIndex(producto => producto.id === Boton);
+        itemsCard[index].cantidad++;
     } else {
         productoAgregado.cantidad = 1;
-        productosEnCarrito.push(productoAgregado);
+        itemsCard.push(productoAgregado);
     }
     Swal.fire({
         position: 'top-end',
@@ -92,9 +92,9 @@ function addToCartClicked(event) {
         timer: 900
     })
     
-    localStorage.setItem("productosEnCarrito", JSON.stringify(productosEnCarrito));
+    localStorage.setItem("itemsCard", JSON.stringify(itemsCard));
     sumaPrecio()
-    cargarProductosCarrito()
+    cargaProductos()
 }
 
 const verifivarButton = document.querySelector('.verifivarButton');
@@ -103,11 +103,11 @@ verifivarButton.addEventListener('click', verificarButtonClick);
 const contenedorCarritoProductos = document.querySelector("#contenderCarritos");
 let botonesEliminar = document.querySelectorAll(".buttonDelete");
 
-function cargarProductosCarrito() {
-    if (productosEnCarrito) {          
+function cargaProductos() {
+    if (itemsCard) {          
         contenedorCarritoProductos.classList.remove("disabled");
         contenedorCarritoProductos.innerHTML = "";
-        productosEnCarrito.forEach(producto => {
+        itemsCard.forEach(producto => {
             const div = document.createElement("div");
             div.classList.add("item");
             div.innerHTML = `
@@ -132,8 +132,9 @@ function cargarProductosCarrito() {
     actualizarBotonesEliminar();
 }
 
-cargarProductosCarrito();
+cargaProductos();
 
+//calculo y suma de todos los productos seleccionados 
 function sumaPrecio() {
     let total = 0;
     const precioTotal = document.querySelector('.precioTotal');
@@ -148,7 +149,7 @@ function sumaPrecio() {
     });
     precioTotal.innerHTML = `${total.toFixed(2)}`;
 
-    localStorage.setItem("productosEnCarrito", JSON.stringify(productosEnCarrito))
+    localStorage.setItem("itemsCard", JSON.stringify(itemsCard))
 }
 
 function actualizarBotonesEliminar() {
@@ -158,13 +159,15 @@ function actualizarBotonesEliminar() {
     });
 }
 
+
+//eliminar producto del carrito 
 function eliminarDelCarrito(event) {
-    const idBoton = event.currentTarget.id;
-    const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
-    productosEnCarrito.splice(index,1);
+    const Boton = event.currentTarget.id;
+    const index = itemsCard.findIndex(producto => producto.id === Boton);
+    itemsCard.splice(index,1);
     sumaPrecio()
-    cargarProductosCarrito();
-    localStorage.setItem("productosEnCarrito", JSON.stringify(productosEnCarrito))
+    cargaProductos();
+    localStorage.setItem("itemsCard", JSON.stringify(itemsCard))
 }
 
 function quantityChanged(event) {
@@ -176,6 +179,7 @@ function quantityChanged(event) {
     sumaPrecio()
 }
 
+//vaciar todo el carrito y culminar compra
 function verificarButtonClick() {
     contenedorCarritoProductos.innerHTML = " ";
 
@@ -186,6 +190,6 @@ function verificarButtonClick() {
         showConfirmButton: false,
         timer: 1500
     })
-    localStorage.removeItem("productosEnCarrito", JSON.stringify(productosEnCarrito));
+    localStorage.removeItem("itemsCard", JSON.stringify(itemsCard));
     sumaPrecio()
 }

@@ -375,10 +375,6 @@ body footer .footer-bottom small {
   height: 20px;
 }
 
-.precioTotalCarrito {
-  color: white;
-}
-
 .carritoCantidad {
   max-width: 40px;
   border: 0px solid #ccc;
